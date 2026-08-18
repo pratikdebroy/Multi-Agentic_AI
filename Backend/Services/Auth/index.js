@@ -13,9 +13,9 @@ dotenv.config()
 const app=express();
 app.use(express.json())
 app.use('/',authrouter)
-app.get('/',(req,res)=>{
-    res.send('Auth service is running')
-})
+// app.get('/',(req,res)=>{
+//     res.send('Auth service is running')
+// })
 app.listen(process.env.PORT,()=>{
     console.log(`Auth service is running on port ${process.env.PORT}`)
     connectDB()
