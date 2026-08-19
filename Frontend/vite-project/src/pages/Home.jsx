@@ -4,6 +4,7 @@ import { auth, googleProvider } from '../../utils/firebase';
 import api from '../../utils/axios';
 import { FcGoogle } from 'react-icons/fc';
 import { useDispatch, useSelector } from 'react-redux';
+import { setUserdata } from '../redux/userSlice';
 const Home = () => {
     const {userData}=useSelector((state=>state.user))
     const dispatch=useDispatch()

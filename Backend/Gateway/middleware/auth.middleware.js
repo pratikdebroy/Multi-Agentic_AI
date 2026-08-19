@@ -1,5 +1,5 @@
 import redis from "../../Shared/redis.js";
-const protect=async (req,resizeBy,next)=>{
+const protect=async (req,res,next)=>{
     try {
         const sessionId=req.cookies?.session
         if(!sessionId){
