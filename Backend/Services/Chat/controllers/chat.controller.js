@@ -1,4 +1,5 @@
 import Conversation from "../models/conversation.model.js";
+import Message from "../models/message.model.js";
 
 export const createConversation = async (req, res) => {
   try {
@@ -76,6 +77,7 @@ export const getMessages = async (req, res) => {
 
     return res.status(200).json(messages);
   } catch (error) {
+    console.log("GET MESSAGES ERROR:", error);
     return res
       .status(500)
       .json({ message: `get messages error ${error}` });

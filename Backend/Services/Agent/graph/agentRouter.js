@@ -1,9 +1,9 @@
 import { getModel } from "../config/agentModels.js";
 
 export const agentRouter = async (state) => {
-  const llm =await getModel("agentRouter");
+    const llm = await getModel("agentRouter");
 
-  const prompt = `
+    const prompt = `
 You are an agent router.
 
 Available agents:
@@ -57,10 +57,10 @@ User request:
 ${state.prompt}
 `;
 
-  const response = await llm.invoke(prompt);
+    const response = await llm.invoke(prompt);
 
-  return {
-    ...state,
-    agent: response.content.trim(),
-  };
+    return {
+        ...state,
+        agent: response.content.trim(),
+    };
 };
